@@ -20,7 +20,8 @@ connectDB();
 // Middlewares
 app.use(cors({
   origin: [
-    "http://localhost:5173"
+    "http://localhost:5173",
+    "https://aiinvoice-generator.vercel.app"
   ],
   credentials: true
 }));
