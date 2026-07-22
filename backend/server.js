@@ -12,14 +12,16 @@ import businessProfileRouter from "./routes/businessProfileRouter.js";
 dns.setServers(["1.1.1.1", "8.8.8.8"]);
 
 const app = express();
-const port = 4000;
+const port = process.env.PORT || 4000;
 
 // Database
 connectDB();
 
 // Middlewares
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: [
+    "http://localhost:5173"
+  ],
   credentials: true
 }));
 app.use(clerkMiddleware());
