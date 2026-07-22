@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Invoice from "../models/InvoiceModel.js";
+import InvoiceModel from "../models/invoiceModel.js";
 import { getAuth } from "@clerk/express";
 import path from 'path';
 
