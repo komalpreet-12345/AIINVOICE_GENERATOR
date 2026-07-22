@@ -1,7 +1,7 @@
 import { getAuth } from "@clerk/express";
 import BusinessProfile from "../models/businessProfileModel.js";
 
-const API_BASE = import.meta.env.VITE_API_BASE;
+const API_BASE = process.env.API_BASE;
 // file to url
 function uploadedFilesToUrls(req) {
   const urls = {};
